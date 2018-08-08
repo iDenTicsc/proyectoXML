@@ -60,6 +60,12 @@ public class FXMLDocumentController implements Initializable {
         listaEmpleados.add(objE);
         
     }
+    @FXML
+    private void crearArchivitoXML(ActionEvent event)
+    {
+        Empleado objE = new Empleado();
+        boolean guardar = objE.crearFileXML(listaEmpleados);
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
